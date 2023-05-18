@@ -5,7 +5,7 @@ const Banner = () => {
     const imgs = [
         'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbGQlMjB0b3lzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1174&q=80',
         'https://images.unsplash.com/photo-1631032024590-140cc8dd4b32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2hpbGQlMjB0b3lzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1174&q=80',
-        'https://images.unsplash.com/photo-1595550903979-1969e5adeb92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNoaWxkZW4lMjBwbGF5JTIwdG95c3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=1174&q=80',
+        'https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbGQlMjB0b3lzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1174&q=80',
     ]
     const data = [
         {
@@ -25,9 +25,9 @@ const Banner = () => {
 
     const imgLen = imgs.length;
     return (
-        <div className="carousel w-full h-[600px] object-cover rounded-xl">
+        <div className="carousel w-full h-[600px] object-cover rounded-xl bg-pink-50">
             {imgs.map((img, index) => <div key={index} id={`slide${index}`} className="carousel-item relative w-full">
-                <img src={img} className="w-full bg-cover filter brightness-75 " />
+                <img src={img} className="w-full object-cover bg-cover filter brightness-75 " />
                 <div className="absolute flex flex-col md:max-w-2xl gap-3 transform -translate-y-1/2 left-5 bottom-5 text-white space-y-4">
                     <h2 className='text-6xl font-bold'>{data[index].futureName}</h2>
                     <p>{data[index].futureDescription}</p>
