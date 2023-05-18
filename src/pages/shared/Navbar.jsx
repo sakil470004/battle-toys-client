@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const navElement = <>
 
-        <li><Link className='' to={'/Home'}>Home</Link></li>
+        <li><Link className='' to={'/'}>Home</Link></li>
         <li><Link className='' to={'/addtoy'}>Add Toy</Link></li>
         <li><Link className='' to={'/mytoys'}>My Toys</Link></li>
         <li><Link className='' to={'/alltoys'}>All Toys</Link></li>
     </>
     return (
-        <div className="navbar bg-pink-lighter">
+        <div className="navbar bg-pink-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost text-slate-500 lg:hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-3">
-                <Link to={'/login'} className="btn  bg-pink-normal hover:bg-pink-full text-black  px-5">Login</Link>
+                <Link to={'/login'} className="btn bg-pink-100 text-black hover:bg-rose-400 hover:text-white px-6">Login</Link>
                 
             </div>
         </div>

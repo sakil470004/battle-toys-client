@@ -1,9 +1,9 @@
 function Footer() {
   return (
-    <div className=' bg-slate-50 py-6 px-2'>
+    <div className=' bg-pink-50 py-6 px-2'>
      
 
-      <footer className="footer  grid grid-cols-1 lg:grid-cols-3 items-center justify-between">
+      <footer className="footer gap-6 grid grid-cols-1 lg:grid-cols-3 place-items-center justify-between">
         <div>
           <span className="footer-title">Battle Toys</span>
           <a className="link link-hover">Facebook</a>
