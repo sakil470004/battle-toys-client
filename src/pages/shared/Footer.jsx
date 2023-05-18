@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import logo from './../../assets/logo.png'
 function Footer() {
   return (
     <div className=' bg-pink-50 py-6 px-2'>
@@ -5,7 +7,7 @@ function Footer() {
 
       <footer className="footer gap-6 grid grid-cols-1 lg:grid-cols-3 place-items-center justify-between">
         <div>
-          <span className="footer-title">Battle Toys</span>
+        <Link to={'/'} className=""><img src={logo} width={100} alt="" /></Link>
           <a className="link link-hover">Facebook</a>
           <a className="link link-hover">Twetter</a>
           <a className="link link-hover">Linkedin</a>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from './../../assets/logo.png'
 
 const Navbar = () => {
     const navElement = <>
@@ -20,7 +21,7 @@ const Navbar = () => {
                         {navElement}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl text-slate-600">Battle Toys</a>
+                <Link to={'/'} className=""><img src={logo} width={100} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

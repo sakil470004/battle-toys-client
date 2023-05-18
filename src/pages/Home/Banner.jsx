@@ -1,52 +1,46 @@
 import React from 'react';
-import img1 from './../../assets/images/banner/1.jpg'
-import img2 from './../../assets/images/banner/2.jpg'
-import img3 from './../../assets/images/banner/3.jpg'
-import img4 from './../../assets/images/banner/4.jpg'
-import img5 from './../../assets/images/banner/5.jpg'
-import img6 from './../../assets/images/banner/6.jpg'
+
 
 const Banner = () => {
-    const imgs = [img1, img2, img3, img4, img5, img6]
+    const imgs = [
+        'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbGQlMjB0b3lzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1174&q=80',
+        'https://images.unsplash.com/photo-1631032024590-140cc8dd4b32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2hpbGQlMjB0b3lzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1174&q=80',
+        'https://images.unsplash.com/photo-1595550903979-1969e5adeb92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGNoaWxkZW4lMjBwbGF5JTIwdG95c3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=1174&q=80',
+    ]
+    const data = [
+        {
+            "futureName": "Inspire and Imagination",
+            "futureDescription": "We prioritize creating toys that inspire imaginative play, allowing children to explore and create their own worlds of fun."
+        },
+        {
+            "futureName": "High-quality craftsmanship",
+            "futureDescription": "Our toys are meticulously crafted using durable materials to ensure they can withstand even the most adventurous play sessions."
+        },
+        {
+            "futureName": "Safety first",
+            "futureDescription": "We adhere to strict safety standards, ensuring our toys are free from harmful chemicals and hazards, providing peace of mind for parents and caregivers"
+        },
+        
+    ]
+
     const imgLen = imgs.length;
     return (
         <div className="carousel w-full h-[600px] object-cover rounded-xl">
             {imgs.map((img, index) => <div key={index} id={`slide${index}`} className="carousel-item relative w-full">
-                <img src={img} className="w-full filter brightness-75 contrast-125" />
+                <img src={img} className="w-full bg-cover filter brightness-75 " />
                 <div className="absolute flex flex-col md:max-w-2xl gap-3 transform -translate-y-1/2 left-5 bottom-5 text-white space-y-4">
-                    <h2 className='text-6xl font-bold'>Affordable Price For Car Servicing</h2>
-                    <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
-                    <div className='flex gap-5'><button className="btn btn-active btn-primary">Discover More</button>
-                        <button className="btn btn-outline btn-secondary">Latest Project</button></div>
+                    <h2 className='text-6xl font-bold'>{data[index].futureName}</h2>
+                    <p>{data[index].futureDescription}</p>
+                    <div className='flex gap-5'><button className="btn bg-pink-100 text-black hover:bg-rose-400 hover:text-white">Discover More</button>
+                    </div>
                 </div>
                 <div className="absolute flex justify-between gap-3 transform -translate-y-1/2 right-5 bottom-5 ">
-                    <a href={`#slide${index - 1 < 0 ? imgLen - 1 : index - 1}`} className="btn btn-circle btn-error">❮</a>
-                    <a href={`#slide${(index + 1) % imgLen}`} className="btn btn-circle btn-error">❯</a>
+                    <a href={`#slide${index - 1 < 0 ? imgLen - 1 : index - 1}`} className="btn btn-circle btn-error  bg-pink-100 text-black hover:bg-rose-400 hover:text-white">❮</a>
+                    <a href={`#slide${(index + 1) % imgLen}`} className=" btn-circle btn-error btn bg-pink-100 text-black hover:bg-rose-400 hover:text-white">❯</a>
                 </div>
 
             </div>)}
-            {/* for delete */}
-            {/* <div id="slide2" className="carousel-item relative w-full">
-                <img src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide3" className="carousel-item relative w-full">
-                <img src="/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide4" className="carousel-item relative w-full">
-                <img src="/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" className="btn btn-circle">❮</a>
-                    <a href="#slide1" className="btn btn-circle">❯</a>
-                </div>
-            </div> */}
+           
         </div>
     );
 };
