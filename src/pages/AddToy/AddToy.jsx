@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 const AddToy = () => {
     const { user } = useContext(AuthContext)
+    const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -35,6 +37,8 @@ const AddToy = () => {
             .then(data => {
                 if (data.insertedId) {
                     alert('Toy Added')
+                    // navigate('/myToys')
+
                 }
             })
     }
