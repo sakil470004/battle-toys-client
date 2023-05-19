@@ -40,7 +40,6 @@ const MyToys = () => {
             <h2 className='text-center text-4xl mb-10'>My Toys</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full ">
-                    {/* head */}
                     <thead>
                         <tr>
                             <th>Photo</th>
