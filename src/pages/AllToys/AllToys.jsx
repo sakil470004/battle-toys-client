@@ -13,7 +13,7 @@ const AllToys = () => {
             .then(data => setToys(data))
     }, [])
     const handleViewDetails = (id) => {
-        navigate(`/updateToys/${id}`)
+        navigate(`/toyDetails/${id}`)
     }
    
     return (
