@@ -9,9 +9,14 @@ const ToyDetails = () => {
         rating,
         availableQuantity,
         details,
+        sellerName,
+        sellerEmail,
         img,
     } = toy
     // console.log(toy)
+    useEffect(() => {
+        document.title = 'Battle Toys | Toy Detals';
+      }, []);
     return (
         <div className='bg-pink-50 px-2 my-16 md:mx-8'>
             <h2 className='text-center text-4xl mb-10'>Toy Details for <span className='text-pink-600'> {toyName} </span></h2>
@@ -23,9 +28,11 @@ const ToyDetails = () => {
                         <h1 className="text-2xl font-bold my-6">Category : {subCategory}</h1>
                         <small className="my-10 text-gray-700">{details}</small>
                         <p className="pb-3">Rating : {rating}</p>
+                        <p className="pb-3">Seller Name : {sellerName}</p>
+                        <p className="pb-3">Seller Email : {sellerEmail}</p>
                         <p className="pb-3">Available Quantity : {availableQuantity}</p>
                         <p className="pb-4 text-4xl text-error">price :${price}</p>
-                   
+
                     </div>
                 </div>
             </div>
