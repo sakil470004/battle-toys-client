@@ -5,7 +5,7 @@ function Footer() {
     <div className=' bg-pink-50 py-6 px-2'>
      
 
-      <footer className="footer gap-6 grid grid-cols-1 lg:grid-cols-3 place-items-center justify-between">
+      <footer className="footer gap-6 grid grid-cols-1 lg:grid-cols-3 place-items-start md:place-items-center  justify-between">
         <div>
         <Link to={'/'} className=""><img src={logo} width={100} alt="" /></Link>
           <a className="link link-hover">Facebook</a>

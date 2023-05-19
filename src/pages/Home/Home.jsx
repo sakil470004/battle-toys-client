@@ -4,7 +4,7 @@ import Gallery from './Gallary';
 
 const Home = () => {
     return (
-        <div>
+        <div className='px-2 md:p-0'>
             <Banner/>
             <Gallery/>
         </div>
