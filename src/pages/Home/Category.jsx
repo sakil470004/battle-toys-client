@@ -10,7 +10,7 @@ const Category = () => {
             .then(data => setToys(data))
     }, [])
     return (
-        <div className='my-20 shadow-xl rounded-lg'>
+        <div className='my-20 shadow-xl rounded-lg md:p-4'>
                 <h2 className='text-4xl text-pink-400 text-center mb-10 font-bold'>Product Category You may like</h2>
 
             <Tabs>

@@ -1,10 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const CategoryCard = ({toy}) => {
-    const {image,_id,name,price,rating,category}=toy
-
-    const handleDetails=()=>{
-        
+const CategoryCard = ({ toy }) => {
+    const { image, _id, name, price, rating, category } = toy
+    const navigate = useNavigate()
+    const handleDetails = () => {
+        navigate(`/singleInitialToy/${_id}`)
     }
     return (
         <div className="card card-compact h-[550px] bg-base-100 shadow-xl">

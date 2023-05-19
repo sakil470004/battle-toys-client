@@ -16,8 +16,8 @@ const ToyDetails = () => {
         <div className='bg-pink-50 px-2 my-16 md:mx-8'>
             <h2 className='text-center text-4xl mb-10'>Toy Details for <span className='text-pink-600'> {toyName} </span></h2>
             <div className="  ">
-                <div className="flex items-center justify-center gap-16 border border-pink-400 rounded-xl flex-col lg:flex-row">
-                    <img src={img} className="h-[500px] w-full object-cover rounded-lg " />
+                <div className="flex items-center justify-start gap-16 border border-pink-400 rounded-xl flex-col lg:flex-row">
+                    <img src={img} className="h-[500px] w-full md:w-1/3 object-cover rounded-lg " />
                     <div className='px-4'>
                         <h1 className="text-5xl font-bold">{toyName}</h1>
                         <h1 className="text-2xl font-bold my-6">Category : {subCategory}</h1>
