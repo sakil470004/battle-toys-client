@@ -25,7 +25,7 @@ const Banner = () => {
 
     const imgLen = imgs.length;
     return (
-        <div className="carousel w-full h-[600px] object-cover rounded-xl bg-pink-50">
+        <div className="carousel w-full h-[600px] my-5 object-cover rounded-xl bg-pink-50">
             {imgs.map((img, index) => <div key={index} id={`slide${index}`} className="carousel-item relative w-full">
                 <img src={img} className="w-full object-cover bg-cover filter brightness-75 " />
                 <div className="absolute flex flex-col md:max-w-2xl gap-3 transform -translate-y-1/2 left-5 bottom-5 text-white space-y-4">

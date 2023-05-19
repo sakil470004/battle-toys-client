@@ -10,19 +10,22 @@ const ToyDetails = () => {
         availableQuantity,
         details,
         img,
-        sellerName,
-        sellerEmail } = toy
+    } = toy
     // console.log(toy)
     return (
-        <div className='bg-pink-50 px-2 py-10 md:px-8'>
+        <div className='bg-pink-50 px-2 my-16 md:mx-8'>
             <h2 className='text-center text-4xl mb-10'>Toy Details for <span className='text-pink-600'> {toyName} </span></h2>
-            <div className="hero min-h-screen shadow-2xl">
-                <div className="hero-content flex-col lg:flex-row">
-                    <img src={img} className=" rounded-lg shadow-2xl" />
-                    <div>
-                        <h1 className="text-5xl font-bold">Box Office News!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+            <div className="  ">
+                <div className="flex items-center justify-center gap-16 border border-pink-400 rounded-xl flex-col lg:flex-row">
+                    <img src={img} className="h-[500px] w-full object-cover rounded-lg " />
+                    <div className='px-4'>
+                        <h1 className="text-5xl font-bold">{toyName}</h1>
+                        <h1 className="text-2xl font-bold my-6">Category : {subCategory}</h1>
+                        <small className="my-10 text-gray-700">{details}</small>
+                        <p className="pb-3">Rating : {rating}</p>
+                        <p className="pb-3">Available Quantity : {availableQuantity}</p>
+                        <p className="pb-4 text-4xl text-error">price :${price}</p>
+                   
                     </div>
                 </div>
             </div>

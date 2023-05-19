@@ -1,12 +1,14 @@
-import React from 'react';
 import Banner from './Banner';
-import Gallery from './Gallary';
+import Gallery from './Galley';
+import Category from './Category';
 
 const Home = () => {
+
     return (
         <div className='px-2 md:p-0'>
-            <Banner/>
-            <Gallery/>
+            <Banner />
+            <Gallery />
+            <Category />
         </div>
     );
 };
