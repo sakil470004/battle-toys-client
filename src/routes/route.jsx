@@ -11,6 +11,7 @@ import Blog from "../pages/Blog/Blog";
 import UpdateToy from "../pages/UpdateToy/UpdateToy";
 import ToyDetails from "../pages/ToyDetails/ToyDetails";
 import InitialToyDetails from "../pages/InitialToyDetails/InitialToyDetails";
+import Page404 from "../pages/Eror/Page404";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,9 @@ const router = createBrowserRouter([
 
 
     ]
-  },
+  }, {
+    path: '*',
+    element: <Page404 />
+  }
 ]);
 export default router

@@ -2,16 +2,22 @@ import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import CategoryCard from './CategoryCard';
+import Loading from '../Loading/Loading';
 const Category = () => {
+    const [loading, setLoading] = useState(false)
     const [toys, setToys] = useState([]);
     useEffect(() => {
+        setLoading(true)
         fetch('http://localhost:5000/initialToys')
             .then(res => res.json())
-            .then(data => setToys(data))
+            .then(data => {
+                setToys(data)
+                setLoading(false)
+            })
     }, [])
     return (
         <div className='my-20 shadow-md rounded-lg md:p-4'>
-            <Loading>
+            <Loading loading={loading}>
                 <h2 className='text-4xl text-pink-400 text-center mb-10 font-bold'>Product Category You may like</h2>
 
                 <Tabs>
