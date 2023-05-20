@@ -43,7 +43,7 @@ const Register = () => {
   setTittle('Register')
   return (
     <div className="  bg-pink-50">
-      <div className=" w-full md:w-1/3 mx-auto py-[25vh] md:py-40">
+      <div className=" w-full md:w-1/3 mx-auto py-[15vh] md:py-40">
 
         <div className="card  shadow-2xl bg-slate-500">
           <h2 className="text-center text-4xl text-white pt-10 ">Register Here </h2>

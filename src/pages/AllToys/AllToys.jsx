@@ -42,7 +42,7 @@ const AllToys = () => {
     const handleSearch = () => {
         setIsSearch(true)
         const searchText = searchRef.current.value;
-        const filteredToy = allToys?.filter(toy => toy.toyName.toLowerCase().includes(searchText))
+        const filteredToy = allToys?.filter(toy => toy.toyName.toLowerCase().includes(searchText.toLowerCase()))
 
         setContainerArray(toys)
         setToys(filteredToy)

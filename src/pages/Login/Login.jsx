@@ -54,7 +54,7 @@ const Login = () => {
     setTittle('Login')
     return (
         <div className="  bg-pink-50">
-            <div className=" w-full md:w-1/3 mx-auto py-[35vh] md:py-52">
+            <div className=" w-full md:w-1/3 mx-auto py-[15vh] md:py-52">
 
                 <div className="card  shadow-2xl bg-slate-500">
                     <h2 className="text-center text-4xl text-white pt-10 ">Login </h2>
