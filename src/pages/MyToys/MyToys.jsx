@@ -12,7 +12,7 @@ const MyToys = () => {
     const navigate = useNavigate()
     useEffect(() => {
         setLoading(true)
-        const url = `http://localhost:5000/myToys?email=${user.email}`;
+        const url = `https://battle-toys-server-sakil470004.vercel.app/myToys?email=${user.email}`;
         fetch(url, {
             method: 'GET'
         })
@@ -28,7 +28,7 @@ const MyToys = () => {
     const handleDelete = (id) => {
         const isDelete = confirm('Are You Sure You want To Delete? This');
         if (isDelete) {
-            fetch(`http://localhost:5000/delete/${id}`, {
+            fetch(`https://battle-toys-server-sakil470004.vercel.app/delete/${id}`, {
                 method: 'DELETE',
 
             })

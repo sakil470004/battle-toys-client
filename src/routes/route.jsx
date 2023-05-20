@@ -41,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: '/alltoys',
         element: <AllToys />,
-        loader:()=>fetch('http://localhost:5000/totalToys')
+        loader:()=>fetch('https://battle-toys-server-sakil470004.vercel.app/totalToys')
       },
       {
         path: '/mytoys',
@@ -50,17 +50,17 @@ const router = createBrowserRouter([
       {
         path: '/toyDetails/:id',
         element: <PrivateRoute> <ToyDetails /></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+        loader: ({ params }) => fetch(`https://battle-toys-server-sakil470004.vercel.app/singleToy/${params.id}`)
       },
       {
         path: '/singleInitialToy/:id',
         element: <PrivateRoute> <InitialToyDetails /></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/singleInitialToy/${params.id}`)
+        loader: ({ params }) => fetch(`https://battle-toys-server-sakil470004.vercel.app/singleInitialToy/${params.id}`)
       },
       {
         path: '/updateToys/:id',
         element: <PrivateRoute> <UpdateToy /></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/singleToy/${params.id}`)
+        loader: ({ params }) => fetch(`https://battle-toys-server-sakil470004.vercel.app/singleToy/${params.id}`)
       },
 
 

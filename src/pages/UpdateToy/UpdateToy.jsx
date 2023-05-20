@@ -27,7 +27,7 @@ const UpdateToy = () => {
             sellerName: toy.sellerName,
             sellerEmail: toy.sellerEmail,
         }
-        fetch(`http://localhost:5000/update/${toy._id}`, {
+        fetch(`https://battle-toys-server-sakil470004.vercel.app/update/${toy._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

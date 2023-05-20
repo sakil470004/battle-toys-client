@@ -9,7 +9,7 @@ const AllToys = () => {
     const [loading, setLoading] = useState(false)
     const { totalToys, allToys } = useLoaderData()
     const [page, setPage] = useState(0)
-    const [limit, setLimit] = useState(5);
+    const [limit, setLimit] = useState(10);
     const [isSearch, setIsSearch] = useState(false);
     const [containerArray, setContainerArray] = useState([])
 
@@ -20,7 +20,7 @@ const AllToys = () => {
     useEffect(() => {
 
         setLoading(true)
-        const url = `http://localhost:5000/allToys?page=${page}&limit=${limit}`;
+        const url = `https://battle-toys-server-sakil470004.vercel.app/allToys?page=${page}&limit=${limit}`;
         fetch(url, {
             method: 'GET'
         })

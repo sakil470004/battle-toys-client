@@ -28,7 +28,7 @@ const AddToy = () => {
             sellerName: user.displayName,
             sellerEmail: user.email,
         }
-        fetch('http://localhost:5000/addToys', {
+        fetch('https://battle-toys-server-sakil470004.vercel.app/addToys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
