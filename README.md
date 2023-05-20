@@ -1,5 +1,5 @@
 <h2>Battle Toys</h2>
-link : <a href='https://battle-toys-5a066.web.app/'>Battle Toys</a>
+link : https://battle-toys-5a066.web.app/
 <br/>
 <br/>
 <h4>The Web Site Future</h4>
