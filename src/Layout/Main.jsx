@@ -6,11 +6,15 @@ import Footer from '../pages/shared/Footer';
 const Main = () => {
     return (
         <div className='bg-pink-50'>
-        <div className='container mx-auto '>
-            <Navbar />
-            <Outlet />
-            <Footer/>
-        </div>
+            <div className='container mx-auto '>
+                <Navbar />
+                <Outlet />
+                <Footer />
+                {/* <Toaster
+                    position="top-right"
+                    reverseOrder={false}
+                /> */}
+            </div>
         </div>
     );
 };
