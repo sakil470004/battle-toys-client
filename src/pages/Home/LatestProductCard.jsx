@@ -14,7 +14,7 @@ const LatestProductCard = ({ toy }) => {
         navigate(`/toyDetails/${_id}`)
     }
     return (
-        <div className="card card-compact h-[550px] bg-base-100 shadow-xl">
+        <div data-aos="flip-right" className="card card-compact h-[550px] bg-base-100 shadow-xl">
             <figure><img className='object-cover' src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{toyName}</h2>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-hot-toast';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const UpdateToy = () => {
@@ -36,7 +37,7 @@ const UpdateToy = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-                    alert('Toy Updated')
+                    toast.success("Toy Updated")
                     navigate('/myToys')
                 }
             })

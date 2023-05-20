@@ -15,7 +15,7 @@ const LatestProduct = () => {
             });
     }, [])
     return (
-        <div className='my-20 shadow-md rounded-lg md:p-4'>
+        <div data-aos="fade-up" className='my-20 shadow-md rounded-lg md:p-4'>
             <Loading loading={loading}>
                 <h2 className='text-4xl text-pink-400 text-center mb-3 font-bold'>Latest Toys</h2>
                 <p className='text-gray-400 font-bold text-center mb-10'>The Toys Your Child Need Most</p>

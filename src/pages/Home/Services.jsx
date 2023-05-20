@@ -23,13 +23,13 @@ const Services = () => {
             svg: "https://plus.unsplash.com/premium_photo-1661764559869-f6052a14b4c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q3VzdG9tZXIlMjBTdXBwb3J0fGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
         },]
     return (
-        <div className='my-20 shadow-md rounded-lg md:p-4'>
+        <div data-aos="fade-up" className='my-20 shadow-md rounded-lg md:p-4'>
             <h2 className='text-4xl text-pink-400 text-center mb-3 font-bold'>Our Futures</h2>
             <p className='text-gray-400 font-bold text-center mb-10'>Why You Choice US !!!</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {/* card */}
                 {productServices.map(ser =>
-                    <div key={ser.name} className="card  bg-base-100 shadow-xl image-full h-[350px] ">
+                    <div key={ser.name} data-aos="flip-right"  className="card  bg-base-100 shadow-xl image-full h-[350px] ">
                         <figure><img className='h-full w-full object-cover' src={ser.svg} alt="Shoes" /></figure>
                         <div className="card-body items-center justify-center">
                             <h2 className="card-title text-gray-100">{ser.name}</h2>

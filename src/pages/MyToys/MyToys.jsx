@@ -33,9 +33,9 @@ const MyToys = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
+                    // console.log(data)
                     if (data.deletedCount > 0) {
-                        alert('deleted');
+                        toast.success("Toy Deleted")
                         const remaining = toys.filter(toy => toy._id !== id);
                         setToys(remaining)
                     }

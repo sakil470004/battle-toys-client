@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../pages/shared/Navbar';
 import Footer from '../pages/shared/Footer';
+import { Toaster } from 'react-hot-toast';
 
 const Main = () => {
     return (
@@ -10,10 +11,10 @@ const Main = () => {
                 <Navbar />
                 <Outlet />
                 <Footer />
-                {/* <Toaster
+                <Toaster
                     position="top-right"
                     reverseOrder={false}
-                /> */}
+                />
             </div>
         </div>
     );

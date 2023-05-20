@@ -12,11 +12,11 @@ const Gallery = () => {
         'https://images.unsplash.com/photo-1589886359717-acc4cdd04d8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFydmVsJTIwdG95fGVufDB8MXwwfHx8MA%3D%3D&auto=format&fit=crop&w=687&q=80',
     ]
     return (
-        <div className='my-20'>
+        <div data-aos="fade-up" className='my-20'>
             <h3 className='text-4xl mb-10 text-pink-400 text-center font-bold'>Toy Gallery</h3>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                 {
-                    imgs.map((img, index) => <img className='animate-custom object-cover rounded-lg h-[540px] w-full shadow-lg' key={index} src={img}></img>)
+                    imgs.map((img, index) => <img data-aos="flip-right" className='animate-custom object-cover rounded-lg h-[540px] w-full shadow-lg' key={index} src={img}></img>)
                 }
             </div>
         </div>

@@ -76,7 +76,7 @@ const Register = () => {
             <div className="form-control mt-6">
               <input className="btn bg-pink-100 text-black hover:bg-rose-400 hover:text-white" value='Register' type='submit'/>
             </div>
-              <p className="mt-6 text-white text-center">Already Account Here? Go to <Link className="text-pink-400 font-bold" to={'/login'}>Login</Link></p>
+              <p className="mt-6 mb-6 text-white text-center">Already Account Here? Go to <Link className="text-pink-400 font-bold" to={'/login'}>Login</Link></p>
               {error && <p className='text-red-500 text-center'>{error}</p>}
           </form>
         </div>

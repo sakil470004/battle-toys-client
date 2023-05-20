@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import setTittle from '../shared/titleFixer';
+import { toast } from 'react-hot-toast';
 
 const AddToy = () => {
     const { user } = useContext(AuthContext)
@@ -37,8 +38,8 @@ const AddToy = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert('Toy Added')
-                    // navigate('/myToys')
+                    toast.success("Toy Added")
+                    navigate('/myToys')
 
                 }
             })

@@ -16,7 +16,7 @@ const Category = () => {
             })
     }, [])
     return (
-        <div className='my-20 shadow-md rounded-lg md:p-4'>
+        <div data-aos="fade-up" className='my-20 shadow-md rounded-lg md:p-4'>
             <Loading loading={loading}>
                 <h2 className='text-4xl text-pink-400 text-center mb-10 font-bold'>Product Category You may like</h2>
 

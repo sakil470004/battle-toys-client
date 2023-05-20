@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import setTittle from "../shared/titleFixer";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
 
@@ -20,14 +21,13 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
         setError('')
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
                 // form.reset();
-                // toast.success(`Login Success`)
+                toast.success(`Login Success`)
                 navigate(from, { replace: true })
             })
             .catch(error => {
@@ -40,7 +40,7 @@ const Login = () => {
         googleLogin()
             .then((result) => {
                 const user = result.user;
-                // toast.success(`Login Success`)
+                toast.success(`Login Success`)
                 console.log(user)
                 navigate(from, { replace: true })
 
@@ -78,7 +78,7 @@ const Login = () => {
                             <button onClick={handleGoogleLogin} className="btn bg-pink-100 text-black hover:bg-rose-400 hover:text-white"><span className="bg-gray-800  border-2 border-white rounded-full text-white text-3xl px-2">G</span>  Google Login</button>
                         </div>
                     </form>
-                    <p className="mt-6 text-white text-center">New Here? Go to <Link className="text-pink-400 font-bold" to={'/register'}>register</Link></p>
+                    <p className="mt-6 mb-6 text-white text-center">New Here? Go to <Link className="text-pink-400 font-bold" to={'/register'}>register</Link></p>
                     {error && <p className='text-red-500 text-center'>{error}</p>}
                 </div>
             </div>
