@@ -1,6 +1,8 @@
 import React from 'react';
+import setTittle from '../shared/titleFixer';
 
 const Blog = () => {
+    setTittle('Blog')
     return (
         <div className="py-10 bg-pink-50 px-2" >
             <h2 className="text-center text-5xl text-rose-700">Answer and Question</h2>

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import setTittle from '../shared/titleFixer';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -41,6 +42,7 @@ const MyToys = () => {
                 })
         }
     }
+    setTittle('My Toys')
     return (
         <div className='bg-pink-50 px-2 py-10 md:px-8'>
             <h2 className='text-center text-4xl mb-10'>My Toys</h2>

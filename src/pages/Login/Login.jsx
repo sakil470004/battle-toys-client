@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import setTittle from "../shared/titleFixer";
 
 const Login = () => {
 
@@ -50,6 +51,7 @@ const Login = () => {
 
             });
     }
+    setTittle('Login')
     return (
         <div className="  bg-pink-50">
             <div className=" w-full md:w-1/3 mx-auto py-[35vh] md:py-52">

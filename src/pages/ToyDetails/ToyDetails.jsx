@@ -1,5 +1,5 @@
-import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import setTittle from '../shared/titleFixer';
 
 const ToyDetails = () => {
     const toy = useLoaderData();
@@ -14,9 +14,7 @@ const ToyDetails = () => {
         img,
     } = toy
     // console.log(toy)
-    useEffect(() => {
-        document.title = 'Battle Toys | Toy Detals';
-      }, []);
+    setTittle('Toy Details')
     return (
         <div className='bg-pink-50 px-2 my-16 md:mx-8'>
             <h2 className='text-center text-4xl mb-10'>Toy Details for <span className='text-pink-600'> {toyName} </span></h2>
