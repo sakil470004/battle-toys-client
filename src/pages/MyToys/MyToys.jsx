@@ -3,6 +3,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import setTittle from '../shared/titleFixer';
+import { toast } from 'react-hot-toast';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);

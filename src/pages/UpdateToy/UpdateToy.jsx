@@ -5,7 +5,7 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 const UpdateToy = () => {
     const toy = useLoaderData();
     const navigate = useNavigate()
-    console.log(toy)
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
