@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import setTittle from '../shared/titleFixer';
+import { toast } from 'react-hot-toast';
 
 const Register = () => {
 
@@ -27,6 +28,7 @@ const Register = () => {
         updateUser({ displayName: name, photoURL: img })
           .then(() => {
             console.log(loggedUser)
+            toast.success(`Login Success`)
             navigate('/')
           }).catch((error) => {
             
