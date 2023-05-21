@@ -8,7 +8,7 @@ const Category = () => {
     const [toys, setToys] = useState([]);
     useEffect(() => {
         setLoading(true)
-        fetch('https://battle-toys-server-sakil470004.vercel.app/initialToys')
+        fetch('https://battle-toys-server.vercel.app/initialToys')
             .then(res => res.json())
             .then(data => {
                 setToys(data)

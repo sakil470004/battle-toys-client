@@ -7,7 +7,7 @@ const LatestProduct = () => {
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         setLoading(true)
-        fetch('https://battle-toys-server-sakil470004.vercel.app/latest')
+        fetch('https://battle-toys-server.vercel.app/latest')
             .then(res => res.json())
             .then(data => {
                 setToys(data)

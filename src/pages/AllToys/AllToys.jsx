@@ -20,7 +20,7 @@ const AllToys = () => {
     useEffect(() => {
 
         setLoading(true)
-        const url = `https://battle-toys-server-sakil470004.vercel.app/allToys?page=${page}&limit=${limit}`;
+        const url = `https://battle-toys-server.vercel.app/allToys?page=${page}&limit=${limit}`;
         fetch(url, {
             method: 'GET'
         })
