@@ -20,7 +20,7 @@ const MyToys = () => {
             .then(data => {
                 setToys(data)
                 setLoading(false)
-            })
+            }).catch(error=>setLoading(false))
     }, [])
     const handleUpdate = (id) => {
         navigate(`/updateToys/${id}`)

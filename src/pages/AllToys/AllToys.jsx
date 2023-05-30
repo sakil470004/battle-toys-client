@@ -30,7 +30,7 @@ const AllToys = () => {
                 setIsSearch(false)
                 setContainerArray([])
                 setLoading(false)
-            })
+            }).catch(error=>setLoading(false))
     }, [page, limit])
     const handleViewDetails = (id) => {
         navigate(`/toyDetails/${id}`)

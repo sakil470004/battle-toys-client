@@ -12,7 +12,7 @@ const LatestProduct = () => {
             .then(data => {
                 setToys(data)
                 setLoading(false)
-            });
+            }).catch(error=>setLoading(false));
     }, [])
     return (
         <div data-aos="fade-up" className='my-20 shadow-md rounded-lg md:p-4'>
